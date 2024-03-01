@@ -26,7 +26,7 @@ const HomePage = () => {
           <AnimeHeading></AnimeHeading>
           <Flex marginBottom={5}>
             <Box marginRight={5}>
-                <FilterSelector />
+              <FilterSelector />
             </Box>
           </Flex>
         </Box>

@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import useGenres from "../hooks/useGenres";
 import useAnimeQueryStore from "../store";
-import imageAction from "../assets/ImageGenre/ImageAction.webp";
 import genre from "../data/genre";
 
 const GenreList = () => {
