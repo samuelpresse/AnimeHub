@@ -16,10 +16,12 @@ interface AnimeQueryStore {
 const useAnimeQueryStore = create<AnimeQueryStore>((set) => ({
     animeQuery: {sortOrder: "score"},
   setSearchText: (searchText) =>
-    set(() => ({ animeQuery: { searchText } })),
+    set((store) => ({ 
+      animeQuery: { ...store.animeQuery, searchText} 
+    })),
   setGenreId: (genreId) =>
     set((store) => ({
-        animeQuery: { ...store.animeQuery, genreId, searchText: undefined },
+        animeQuery: { ...store.animeQuery, genreId},
     })),
     setSortOrder: (sortOrder) =>
     set((store) => ({

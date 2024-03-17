@@ -3,7 +3,6 @@ import APIClient from '../services/api-client';
 import { Genre } from '../entities/Anime';
 import { useQuery } from '@tanstack/react-query';
 
-// Utilisation d'APIClient pour le type Anime
 const apiClient = new APIClient<Genre>('/genres/anime');
 
 const useGenres = () => 
