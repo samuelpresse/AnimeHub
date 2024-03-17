@@ -18,7 +18,7 @@ const GameCard = ({ anime }: Props) => {
           <AnimeScore score={anime.score} />
         </HStack>
         <Heading fontSize="2xl">
-          <Link to={"/games/" + anime.mal_id}>{anime.title}</Link>
+          <Link to={"/anime/" + anime.mal_id}>{anime.title}</Link>
         </Heading>
       </CardBody>
     </Card>

@@ -1,17 +1,23 @@
 import { Heading } from "@chakra-ui/react";
+import useAnimeQueryStore from "../store";
+import genresData from "../data/genre";
+
+interface Genre {
+  mal_id: number;
+  name: string;
+}
 
 const AnimeHeading = () => {
-  //   const genreId = useGameQueryStore((s) => s.gameQuery.genreId);
-  //   const genre = useGenre(genreId);
+  const genreId = useAnimeQueryStore((state) => state.animeQuery.genreId);
 
-  //   const platformId = useGameQueryStore((s) => s.gameQuery.platformId);
-  //   const platform = usePlatform(platformId);
+  const genreName =
+    genresData.data.find((genre: Genre) => genre.mal_id === genreId)?.name ||
+    "Top";
 
-  //   const heading = `${platform?.name || ""} ${genre?.name || ""} Games`;
-
+  const heading = `${genreName} Anime`;
   return (
     <Heading as="h1" marginY={5} fontSize="5xl">
-      Top Anime
+      {heading}
     </Heading>
   );
 };
