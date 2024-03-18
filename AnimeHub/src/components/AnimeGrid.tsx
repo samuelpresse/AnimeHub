@@ -3,7 +3,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import React from "react";
 import AnimeCardContainer from "./AnimeCardContainer";
 import AnimeCard from "./AnimeCard";
-import useAnime from "../hooks/useAnime";
+import useAnime from "../hooks/useAnimes";
 import AnimeCardSkeleton from "./AnimeCardSkeleton";
 
 const AnimeGrid = () => {

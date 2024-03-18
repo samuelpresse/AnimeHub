@@ -1,8 +1,13 @@
 import axios, { AxiosRequestConfig } from 'axios';
+import { Anime } from '../entities/Anime';
   
   export interface FetchResponse<T> {
     pagination:{last_visible_page:number,has_next_page:boolean,current_page:number;}
     data: T[];
+  }
+
+  export interface FetchResponseAnime<T> {
+    data: T;
   }
 
 const axiosInstance = axios.create({
@@ -24,7 +29,7 @@ const axiosInstance = axios.create({
   
     get = (id: number | string) => {
       return axiosInstance
-        .get<T>(this.endpoint + '/' + id)
+        .get<FetchResponseAnime<T>>(this.endpoint + '/' + id)
         .then((res) => res.data);
     };
   }
