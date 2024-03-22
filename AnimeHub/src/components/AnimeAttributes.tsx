@@ -8,7 +8,6 @@ interface Props {
 }
 
 const AnimeAttributes = ({ anime }: Props) => {
-  console.log(anime);
   return (
     <SimpleGrid columns={2} as="dl">
       <DefinitionItem term="Statistics">

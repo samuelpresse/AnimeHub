@@ -10,11 +10,12 @@ import { useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
 import AnimeAttributes from "../components/AnimeAttributes";
 import useAnime from "../hooks/useAnime";
+import AnimeCharacters from "../components/AnimeCharacters";
 
 const AnimeDetailPage = () => {
   const { id } = useParams();
   const { data: anime, isLoading, error } = useAnime(id!);
-  console.log(anime);
+
   if (isLoading) return <Spinner />;
 
   if (error || !anime) throw error;
@@ -42,6 +43,7 @@ const AnimeDetailPage = () => {
             objectFit="cover"
           />
         )}
+        <AnimeCharacters />
       </GridItem>
     </SimpleGrid>
   );

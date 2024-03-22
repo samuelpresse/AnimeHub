@@ -1,24 +1,17 @@
 import {
   List,
   ListItem,
-  Spinner,
   Heading,
   Button,
   Image,
   HStack,
 } from "@chakra-ui/react";
-import useGenres from "../hooks/useGenres";
 import useAnimeQueryStore from "../store";
 import genre from "../data/genre";
 
 const GenreList = () => {
-  const { data, isLoading, error } = useGenres();
   const selectedGenreId = useAnimeQueryStore((s) => s.animeQuery.genreId);
   const setSelectedGenreId = useAnimeQueryStore((s) => s.setGenreId);
-
-  if (error) return null;
-
-  if (isLoading) return <Spinner />;
 
   return (
     <>
