@@ -11,7 +11,6 @@ const AnimeGrid = () => {
     data,
     error,
     isLoading,
-    isFetchingNextPage,
     fetchNextPage,
     hasNextPage,
   } = useAnime();

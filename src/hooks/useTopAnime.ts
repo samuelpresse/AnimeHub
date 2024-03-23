@@ -2,7 +2,6 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 import ms from 'ms';
 import APIClient, { FetchResponse } from '../services/api-client';
 import { Anime } from '../entities/Anime';
-import useAnimeQueryStore from '../store';
 
 const apiClient = new APIClient<Anime>('/top/anime');
 

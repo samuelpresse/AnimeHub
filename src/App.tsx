@@ -5,14 +5,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import React from "react";
 
 function App() {
-  const {
-    data,
-    error,
-    isLoading,
-    isFetchingNextPage,
-    fetchNextPage,
-    hasNextPage,
-  } = useTopAnime();
+  const { data, error, fetchNextPage, hasNextPage } = useTopAnime();
 
   if (error) return <Text>{error.message}</Text>;
   const fetchedGamesCount =

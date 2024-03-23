@@ -1,4 +1,4 @@
-import { Box, Grid, Show, GridItem, Flex, Text } from "@chakra-ui/react";
+import { Box, Grid, Show, GridItem, Flex } from "@chakra-ui/react";
 import AnimeGrid from "../components/AnimeGrid";
 import GenreList from "../components/GenreList";
 import AnimeHeading from "../components/AnineHeading";
